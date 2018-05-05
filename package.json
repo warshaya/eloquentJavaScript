@@ -1,0 +1,22 @@
+{
+  "name": "eloquentjavascript",
+  "version": "1.0.0",
+  "description": "programs and exercises taken from _Eloquent JavaScript_",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/warshaya/eloquentJavaScript.git"
+  },
+  "keywords": [
+    "practice"
+  ],
+  "author": "warshaya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/warshaya/eloquentJavaScript/issues"
+  },
+  "homepage": "https://github.com/warshaya/eloquentJavaScript#readme"
+}
