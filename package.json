@@ -4,7 +4,9 @@
   "description": "programs and exercises taken from _Eloquent JavaScript_",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "robots": "node index.js",
+    "pgrouptests": "jest pgroup.test.js"
   },
   "repository": {
     "type": "git",
