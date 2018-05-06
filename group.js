@@ -9,8 +9,11 @@ class Group {
     this._data.push(value);
   }
 
-  delete () {
-    return 0;
+  delete (value) {
+    const index = this._data.indexOf(value);
+    if (index > -1) {
+      this._data.splice(index, 1);
+    }
   }
 
   has (value) {
