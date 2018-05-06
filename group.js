@@ -13,6 +13,10 @@ class Group {
     return 0;
   }
 
+  has() {
+    return 0;
+  }
+
 }
 
 module.exports = { Group };
