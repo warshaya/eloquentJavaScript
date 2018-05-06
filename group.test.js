@@ -11,3 +11,8 @@ test('group_hasAddMethod', () => {
   expect(testGroup.add()).toBeDefined();
 });
 
+test('group_hasDeleteMethod', () => {
+  const testGroup = new Group();
+  expect(testGroup.delete()).toBeDefined();
+});
+

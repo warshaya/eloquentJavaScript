@@ -9,6 +9,10 @@ class Group {
     return 0;
   }
 
+  delete() {
+    return 0;
+  }
+
 }
 
 module.exports = { Group };
