@@ -5,6 +5,14 @@ class Group {
     this._data = [];
   }
 
+  static from (inputArray) {
+    const group = new Group();
+    for (let entry of inputArray) {
+      group.add(entry);
+    }
+    return group;
+  }
+
   add (value) {
     if (this._data.indexOf(value) == -1) {
       this._data.push(value);

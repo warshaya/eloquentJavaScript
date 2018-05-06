@@ -51,3 +51,11 @@ test('add_addElementTwice_OnlyKeepsOneCopy', () => {
   expect(result).toBe(false);
 });
 
+test('from_array_groupHasElement', () => {
+  const testGroup = Group.from([1, 2, 3]);
+  expect(testGroup.has(1)).toBe(true);
+  expect(testGroup.has(2)).toBe(true);
+  expect(testGroup.has(3)).toBe(true);
+  expect(testGroup.has(4)).toBe(false);
+});
+
