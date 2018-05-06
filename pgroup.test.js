@@ -6,11 +6,11 @@ test('pgroup exists', () => {
   expect(testgroup).toBeDefined();
 });
 
-test('add_element_groupHasTheElement', () => {
+test('add_element_oldGroupDoesNotHaveTheElement', () => {
   const testgroup = new PGroup();
-  testgroup.add(1);
+  const testgroup2 = testgroup.add(1);
   const result = testgroup.has(1);
-  expect(result).toBe(true);
+  expect(result).toBe(false);
 });
 
 test('delete_element_removesTheElement', () => {
@@ -25,6 +25,5 @@ test('add_element_returnsANewGroupwithElement', () => {
   const testgroup = new PGroup();
   const testgroup2 = testgroup.add(1);
   expect(testgroup2.has(1)).toBe(true);
-  expect(testgroup.has(1)).toBe(false);
 });
 
