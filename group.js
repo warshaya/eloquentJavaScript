@@ -5,8 +5,8 @@ class Group {
     this._data = [];
   }
 
-  add() {
-    return 0;
+  add(value) {
+    this._data.push(value);
   }
 
   delete() {

@@ -6,9 +6,9 @@ test('group_isDefined', () => {
   expect(testGroup).toBeDefined();
 });
 
-test('group_hasAddMethod', () => {
+test('group_addMethod_returnsUndefined', () => {
   const testGroup = new Group();
-  expect(testGroup.add()).toBeDefined();
+  expect(testGroup.add()).toBeUndefined();
 });
 
 test('group_hasDeleteMethod', () => {
@@ -25,5 +25,12 @@ test('group_newGroup_isEmpty', () => {
   const testGroup = new Group();
   const result = testGroup.has(0);
   expect(result).toBe(false);
+});
+
+test('add_numberToGroup_groupHasNumber', () => {
+  const testGroup = new Group();
+  testGroup.add(0);
+  const result = testGroup.has(0);
+  expect(result).toBe(true);
 });
 
