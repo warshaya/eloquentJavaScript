@@ -1,20 +1,24 @@
 
 class Group {
 
-  constructor() {
+  constructor () {
     this._data = [];
   }
 
-  add(value) {
+  add (value) {
     this._data.push(value);
   }
 
-  delete() {
+  delete () {
     return 0;
   }
 
-  has() {
-    return false;
+  has (value) {
+    if (this._data.indexOf(value) > -1) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
 }
