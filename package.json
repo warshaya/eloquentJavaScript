@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "robots": "node index.js",
-    "pgrouptests": "./node_modules/.bin/jest pgroup.test.js"
+    "pgrouptests": "./node_modules/.bin/jest pgroup.test.js",
+    "grouptests": "./node_modules/.bin/jest --runTestsByPath group.test.js"
   },
   "repository": {
     "type": "git",
