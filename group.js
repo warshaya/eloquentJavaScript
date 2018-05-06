@@ -6,7 +6,9 @@ class Group {
   }
 
   add (value) {
-    this._data.push(value);
+    if (this._data.indexOf(value) == -1) {
+      this._data.push(value);
+    }
   }
 
   delete (value) {

@@ -42,3 +42,12 @@ test('delete_removesValueFromGroup', () => {
   expect(result).toBe(false);
 });
 
+test('add_addElementTwice_OnlyKeepsOneCopy', () => {
+  const testGroup = new Group();
+  testGroup.add(1);
+  testGroup.add(1);
+  testGroup.delete(1);
+  const result = testGroup.has(1);
+  expect(result).toBe(false);
+});
+
