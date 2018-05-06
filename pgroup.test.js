@@ -21,3 +21,10 @@ test('delete_element_removesTheElement', () => {
   expect(result).toBe(false);
 });
 
+test('add_element_returnsANewGroupwithElement', () => {
+  const testgroup = new PGroup();
+  const testgroup2 = testgroup.add(1);
+  expect(testgroup2.has(1)).toBe(true);
+  expect(testgroup.has(1)).toBe(false);
+});
+

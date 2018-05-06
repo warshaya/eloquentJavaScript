@@ -8,7 +8,9 @@ class PGroup {
   }
 
   add (element) {
-    this.group.add(element);
+    const copyOfGroup = Group.from(this.group);
+    copyOfGroup.add(element);
+    return copyOfGroup;
   }
 
   has (element) {
