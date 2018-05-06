@@ -43,3 +43,10 @@ test('add_usingSymbols_works', () => {
   expect(result).toBe(true);
 });
 
+test('add_usingStrings_works', () => {
+  const testgroup = new PGroup();
+  const testgroup2 = testgroup.add("test");
+  const result = testgroup2.has("test");
+  expect(result).toBe(true);
+});
+
