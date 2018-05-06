@@ -21,3 +21,9 @@ test('group_hasHasMethod', () => {
   expect(testGroup.has()).toBeDefined();
 });
 
+test('group_newGroup_isEmpty', () => {
+  const testGroup = new Group();
+  const result = testGroup.has(0);
+  expect(result).toBe(false);
+});
+

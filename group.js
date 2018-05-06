@@ -14,7 +14,7 @@ class Group {
   }
 
   has() {
-    return 0;
+    return false;
   }
 
 }
