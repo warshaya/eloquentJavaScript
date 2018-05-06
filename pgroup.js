@@ -10,7 +10,9 @@ class PGroup {
   add (element) {
     const copyOfGroup = Group.from(this.group);
     copyOfGroup.add(element);
-    return copyOfGroup;
+    const newPGroup = new PGroup();
+    newPGroup.group = copyOfGroup;
+    return newPGroup;
   }
 
   has (element) {
@@ -18,7 +20,11 @@ class PGroup {
   }
 
   delete (element) {
-    this.group.delete(element);
+    const copyOfGroup = Group.from(this.group);
+    copyOfGroup.delete(element);
+    const newPGroup = new PGroup();
+    newPGroup.group = copyOfGroup;
+    return newPGroup;
   }
 
 }

@@ -27,3 +27,12 @@ test('add_element_returnsANewGroupwithElement', () => {
   expect(testgroup2.has(1)).toBe(true);
 });
 
+test('delete_element_returnsNewGroupWithoutElement', () => {
+  const testgroup = new PGroup();
+debugger;
+  const testgroup2 = testgroup.add(1);
+  const testgroup3 = testgroup2.delete(1);
+  const result = testgroup3.has(1);
+  expect(result).toBe(false);
+});
+
