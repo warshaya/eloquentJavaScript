@@ -6,3 +6,8 @@ test('group_isDefined', () => {
   expect(testGroup).toBeDefined();
 });
 
+test('group_hasAddMethod', () => {
+  const testGroup = new Group();
+  expect(testGroup.add()).toBeDefined();
+});
+
