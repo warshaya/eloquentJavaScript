@@ -34,6 +34,29 @@ class Group {
     }
   }
 
+  [Symbol.iterator] () {
+    return new GroupIterator(this);
+  }
+
+}
+
+class GroupIterator {
+
+  constructor (group) {
+    this.group = group;
+    this.index = 0;
+  }
+
+  next () {
+    if (this.index == this.group._data.length) {
+      return {done: true};
+    } else {
+      let value = this.group._data[this.index];
+      this.index++;
+      return {value, done: false};
+    }
+  }
+
 }
 
 module.exports = { Group };

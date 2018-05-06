@@ -59,3 +59,10 @@ test('from_array_groupHasElement', () => {
   expect(testGroup.has(4)).toBe(false);
 });
 
+test('group_isIterable', () => {
+  const testGroup = Group.from([1, 2, 3]);
+  for (let entry of testGroup) {
+    let temp = entry;
+  }
+});
+
