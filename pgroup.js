@@ -7,6 +7,14 @@ class PGroup {
     this.group = new Group();
   }
 
+  add (element) {
+    this.group.add(element);
+  }
+
+  has (element) {
+    return this.group.has(element);
+  }
+
 }
 
 module.exports = { PGroup };
