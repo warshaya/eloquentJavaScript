@@ -36,3 +36,10 @@ debugger;
   expect(result).toBe(false);
 });
 
+test('add_usingSymbols_works', () => {
+  const testgroup = new PGroup();
+  const testgroup2 = testgroup.add(Symbol.testword);
+  const result = testgroup2.has(Symbol.testword);
+  expect(result).toBe(true);
+});
+
