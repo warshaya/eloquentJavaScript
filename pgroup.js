@@ -15,6 +15,10 @@ class PGroup {
     return this.group.has(element);
   }
 
+  delete (element) {
+    this.group.delete(element);
+  }
+
 }
 
 module.exports = { PGroup };
