@@ -55,3 +55,19 @@ test('empty_returnsAnEmptyPGroup', () => {
   expect(testgroup).toBeDefined();
 });
 
+test('acceptanceTest', () => {
+  let a = PGroup.empty.add("a");
+  let ab = a.add("b");
+  let b = ab.delete("a");
+  
+  let result1 = b.has("b");
+  expect(result1).toBe(true);
+
+  let result2 = a.has("b");
+  expect(result2).toBe(false);
+
+  let result3 = b.has("a");
+  expect(result3).toBe(false);
+
+});
+
