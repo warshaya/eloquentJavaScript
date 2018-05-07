@@ -50,3 +50,8 @@ test('add_usingStrings_works', () => {
   expect(result).toBe(true);
 });
 
+test('empty_returnsAnEmptyPGroup', () => {
+  const testgroup = PGroup.empty;
+  expect(testgroup).toBeDefined();
+});
+

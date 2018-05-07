@@ -7,6 +7,10 @@ class PGroup {
     this.group = new Group();
   }
 
+  static get empty() {
+    return new PGroup();
+  }
+
   add (element) {
     const copyOfGroup = Group.from(this.group);
     copyOfGroup.add(element);
