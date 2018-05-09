@@ -7,7 +7,8 @@
     "test": "jest",
     "robots": "node index.js",
     "pgrouptests": "./node_modules/.bin/jest pgroup.test.js",
-    "grouptests": "./node_modules/.bin/jest --runTestsByPath group.test.js"
+    "grouptests": "./node_modules/.bin/jest --runTestsByPath group.test.js",
+    "retrytests": "./node_modules/.bin/jest reliableMultiply.test.js"
   },
   "repository": {
     "type": "git",
