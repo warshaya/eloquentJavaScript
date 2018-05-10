@@ -7,6 +7,8 @@ test('reliableMultiply_8x8_returns64', () => {
 });
 
 test('reliableMultiply_8x8_doesNotThrow', () => {
-  reliableMultiply(8, 8);
+  for (let i = 0; i < 100; i++) {
+    reliableMultiply(8, 8);
+  }
 });
 
