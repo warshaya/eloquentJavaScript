@@ -6,3 +6,7 @@ test('reliableMultiply_8x8_returns64', () => {
   expect(result).toBe(64);
 });
 
+test('reliableMultiply_8x8_doesNotThrow', () => {
+  reliableMultiply(8, 8);
+});
+
