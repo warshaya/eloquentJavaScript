@@ -10,7 +10,20 @@ function primitiveMultiply(a, b) {
 }
 
 function reliableMultiply (a, b) {
-  return primitiveMultiply(a, b);
+  let result;
+  for (;;) {
+    try {
+      result = primitiveMultiply(a, b);
+      break;
+    } catch (e) {
+      if (e instanceof MultiplicatorUnitFailure) {
+        // do nothing
+      } else {
+        throw e;
+      }
+    }
+  }
+  return result;
 }
 
 module.exports = { reliableMultiply };
