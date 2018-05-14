@@ -18,8 +18,13 @@ function boxMaker () {
 function withBoxUnlocked(body, abox) {
   // Your code here
   abox.unlock();
-  body();
-  abox.lock();
+  try {
+    body();
+  } catch(e) {
+    console.log(e);
+  } finally {
+    abox.lock();
+  }
 }
 
 module.exports = { boxMaker, withBoxUnlocked };

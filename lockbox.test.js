@@ -17,3 +17,16 @@ test('withBoxUnlocked_pushAGoldPiece_BoxContainsGoldPiece', () => {
   expect(result).toEqual(["gold piece"]);
 });
 
+test('withBoxUnlocked_errorRaised_boxIsLockedAgain', () => {
+  let testBox = boxMaker();
+  try {
+    withBoxUnlocked(function() {
+      throw new Error("Pirates on the horizon! Abort!");
+    }, testBox);
+  } catch (e) {
+    console.log("Error raised:", e);
+  }
+  const result = testBox.locked;
+  expect(result).toBe(true);
+});
+
