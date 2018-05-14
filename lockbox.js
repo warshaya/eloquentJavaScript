@@ -10,8 +10,11 @@ const box = {
   }
 };
 
-function withBoxUnlocked(body) {
-  // Your code here.
+function withBoxUnlocked(body, abox) {
+  // Your code here
+  abox.unlock();
+  body();
+  abox.lock();
 }
 
 module.exports = { box, withBoxUnlocked };
