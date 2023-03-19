@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/warshaya/eloquentJavaScript#readme",
   "dependencies": {
-    "jest": "^22.4.3"
+    "jest": "^29.5.0"
   }
 }
